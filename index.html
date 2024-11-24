@@ -15,24 +15,50 @@
 </head>
 
 <body>
-    <div class="main-container">
-        <header>
-            <div class="logo-and-menu">
-            <section class="logo-reservia">
-                <img src="./images/logo/Booki.png" alt="Logo du site Booki"/>
-            </section>
-            <section class="menu">
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="logo-and-menu">
+            <div class="logo-reservia">
+                <img src="./images/logo/Booki.png" alt="Logo du site Booki" />
+            </div>
+            <div class="menu">
                 <button class="btn-hebergements">
-                    <p class="menu-btn">Hébergements</p>
+                    <a href="#hebergements" class="menu-btn">Hébergements</a>
                 </button>
                 <button class="btn-activities">
-                    <p class="menu-btn">Activités</p>
+                    <a href="#activities" class="menu-btn">Activités</a>
                 </button>
-            </section>
             </div>
-        </header>
+        </div>
+    </header>
+
+    <div class="main-container">
+
         <main>
-            <div class="hebergements-and-populaires">
+
+            <!-- SECTION SEARCH FORM -->
+
+            <div class="infos-group">
+                <section class="headline">
+                    <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+                    <p>En plein centre-ville ou en pleine nature</p>
+                </section>
+                <section class="search-bar">
+
+                </section>
+                <section class="filter-bar">
+
+                </section>
+                <section class="info-bar">
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                </section>
+            </div>
+
+            <!-- SECTIONS HEBERGEMENTS -->
+
+            <div id="hebergements" class="hebergements-and-populaires">
                 <section class="hebergements">
 
                 </section>
@@ -44,7 +70,8 @@
                     <div class="populaires-cards">
                         <a href="#">
                             <article class="card">
-                                <img src="./images/hebergements/emile-guillemot.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/emile-guillemot.jpg"
+                                    alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Le soleil du matin</h3>
@@ -63,7 +90,8 @@
                         </a>
                         <a href="#">
                             <article class="card">
-                                <img src="./images/hebergements/aw-creative.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/aw-creative.jpg"
+                                    alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Chambres d’hôtes Au cœur de l’eau</h3>
@@ -82,7 +110,8 @@
                         </a>
                         <a href="#">
                             <article class="card">
-                                <img src="./images/hebergements/febrian-zakaria2.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/febrian-zakaria2.jpg"
+                                    alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Bleu et Blanc</h3>
@@ -101,6 +130,12 @@
                         </a>
                     </div>
                 </section>
+            </div>
+
+            <!-- SECTION ACTIVITIES -->
+
+            <div id="activities" class="activities">
+
             </div>
         </main>
         <footer></footer>

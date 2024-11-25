@@ -165,6 +165,65 @@ a {
     margin: 0px;
 }
 
+.filter-bar{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.buttons-filter{  
+    height: 50px;
+    border-radius: 25px;
+    border: solid #D9D9D9;
+    border-width: 2px;
+    background: none;
+}
+
+.buttons-filter:hover{
+    background-color: #DEEBFF;
+}
+
+.filter-button{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 19px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 19.96px;
+}
+
+.filter-button img{
+    max-width: 22px;
+    max-height: 22px;
+}
+
+.filter-btn text{
+    margin: 0px;
+}
+
+.info-bar{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.info-bar img{
+    height: 24px;
+    width: 24px;
+    border-width: 1px;
+    border-color: #D9D9D9;
+}
+
+.info-bar p{
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.78px;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;

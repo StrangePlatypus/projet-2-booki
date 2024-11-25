@@ -33,6 +33,12 @@ header{
     box-sizing: border-box;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -175,6 +181,46 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    columns: 3;
+}
+
+.hebergements-row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.hebergements-cards .card{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0px 0px 15px;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: #ffffff;
+    border-width: 5px;
+}
+
+.hebergements-cards .card-content{
+    width: 100%;
+    padding: 0px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hebergements-cards .card-title, .hebergements-cards .card-subtitle{
+    margin: 0px;
 }
 
 /****** Populaires ***********/
@@ -222,8 +268,71 @@ a {
     margin-bottom: 5px;
 }
 
+/****** Activities ***********/
 
+.activities{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
+.activities-frame{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+}
+
+.activities-frame .card{
+    padding: 0px;
+}
+
+.activities-frame img{
+    width: 100%;
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: none;
+}
+
+.activities-frame .card-txt{
+    display: inline-flex;
+    padding: 20px 19px 20px;
+    gap: 10px;
+}
+
+.activities-frame h3{
+    margin: 0px;
+}
+
+/****** Footer ********/
+
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #F2F2F2;
+    columns: 3;
+}
+
+.col-footer{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+.col-footer p, .col-footer h3{
+    margin: 0px;
+}
+
+.filter-title{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    margin: 0px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 

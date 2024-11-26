@@ -77,6 +77,7 @@ a {
     height: 79px;
     display: flex;
     position: relative;
+    justify-content: space-between;
 }
 
 .logo-reservia {
@@ -91,10 +92,8 @@ a {
 .menu {
     max-width: fit-content;
     max-height: fit-content;
-    left: 1064px;
     padding: 0px 50px 0px;
     display: flex;
-    position: absolute;
     gap: 68px;
 }
 
@@ -107,17 +106,9 @@ a {
     background-color: transparent;
     padding-top: 16px;
     width: fit-content;
+    height: fit-content;
 }
 
-@media (max-width: 768px){
-    .btn-hebergements:hover,
-    .btn-activities:hover {
-        border: solid #f2f2f2;
-        border-width: 2px;
-        border-style: hidden hidden solid;
-        width: fit-content;
-    }
-    }
 
 .btn-hebergements:hover,
 .btn-activities:hover {
@@ -127,17 +118,9 @@ a {
     width: fit-content;
 }
 
-@media (max-width: 768px){
-.btn-hebergements:hover,
-.btn-activities:hover {
-    border: solid #0065FC;
-    border-width: 2px;
-    border-style: hidden hidden solid;
-    width: fit-content;
-}
-}
 
-.menu-btn {
+.menu-btn{
+    margin: 0px;
     font-size: 16px;
     font-weight: 400;
     line-height: 18.78px;
@@ -165,10 +148,90 @@ a {
     margin: 0px;
 }
 
+.search-bar{
+    display: flex;
+    max-height: 49px;
+    max-width: fit-content;
+    border-radius: 15px;
+    border: 1px solid #F2F2F2;
+    gap: 24px;
+
+}
+
+.search-front-icon{
+    height: 49px;
+    width: 50px;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #F2F2F2;
+}
+
+.search-front-icon img{
+    position: relative;
+    top: 15px;
+    left: 18px;
+}
+
+.search-input{
+    padding: 0px;
+    border: none;
+    height: 49px;
+    max-width: 147px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+}
+
+.search-input:focus-visible {
+    outline: none;
+}
+
+::placeholder{
+    margin: 0px;
+    line-height: 21.13px;
+    color: #000000;
+    opacity: 1;
+}
+
+.submit-input-desktop{
+    background-color: #0065FC;
+    height: 49px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border : none;
+    padding: 15px 16px;
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: center;
+    color: #ffffff
+}
+
+.submit-input-mobile{
+    background-color: #0065FC;
+    height: 49px;
+    border-radius: 15px;
+    border : none;
+    padding: 15px 16px;
+}
+.submit-input-mobile img{
+    max-height: 17px;
+    max-width: 17px;
+}
+
 .filter-bar{
     display: flex;
+    flex-direction: row;
     gap: 15px;
     align-items: center;
+}
+
+.filters{
+    display: inline-flex;
+    gap: 15px;
 }
 
 .buttons-filter{  
@@ -183,6 +246,7 @@ a {
     background-color: #DEEBFF;
 }
 
+
 .filter-button{
     display: flex;
     flex-direction: row;
@@ -193,6 +257,7 @@ a {
     font-size: 17px;
     font-weight: 700;
     line-height: 19.96px;
+    width: auto;
 }
 
 .filter-button img{
@@ -247,7 +312,7 @@ a {
     columns: 3;
 }
 
-.hebergements-row{
+.hebergements-cards{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -396,8 +461,27 @@ footer{
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+
+/* Big devices (desktops, less or equal 1440px) */
+
+@media (min-width : 1025px) {
+    .submit-input-mobile {
+        display: none;
+    }
+}
+
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+    .submit-input-mobile {
+        display: none;
+    }
+
+    .activities-frame img{
+        height: 200px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -432,5 +516,120 @@ footer{
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    body{
+        gap: 30px;
+    }
+
+    .logo-and-menu {
+        height: fit-content;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-reservia{
+        padding: 30px;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px;
+    }
+
+    .btn-hebergements,
+    .btn-activities {
+        padding: 0;
+    }
+
+    .btn-hebergements:hover,
+    .btn-activities:hover {
+        border: solid #0065FC;
+        border-width: 2px;
+        border-style: hidden hidden solid;
+        width: fit-content;
+    }
+    
+    .main-container{
+        padding: 0%;
+    }
+
+    .infos-group{
+        padding: 0px 20px 0px;
+    }
+
+    .submit-input-desktop {
+        display: none;
+    }
+
+    .filter-bar{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .filters{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        width: 100%;
+    }
+
+    .buttons-filter{
+        width: 100%;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction:column-reverse;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .hebergements ,.populaires{
+        width: 100%;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .hebergements-and-populaires .populaires{
+        background-color: #F2F2F2;
+        border-radius: 0%;
+    }
+
+    .hebergements-and-populaires .hebergements{
+        background-color: transparent;
+    }
+
+    .hebergements-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: auto;
+    }
+
+    .hebergements-cards img{
+        height: 124px;
+    }
+
+    .activities-frame{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .activities-frame img{
+        height: 141px;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .col-footer{
+        width: auto;
+    }
 }

@@ -38,7 +38,7 @@
 
         <main>
 
-            <!-- SECTION INFO -->    
+            <!-- SECTION INFO -->
 
             <div class="infos-group">
                 <section class="headline">
@@ -46,37 +46,51 @@
                     <p>En plein centre-ville ou en pleine nature</p>
                 </section>
 
-            <!-- SECTION SEARCH FORM -->
+                <!-- SECTION SEARCH FORM -->
 
-                <section class="search-bar">
+                <form class="search-bar" method="get" action="">
+                    <div class="search-front-icon">
+                        <img src="./images/icons/place.png">
+                    </div>
+                    <input class="search-input" type="text" autocomplete="off" name="search"
+                        placeholder="Marseille, France">
+                    <button class="submit-input-desktop" type="submit">Rechercher</button>
+                    <button class="submit-input-mobile" type="submit">
+                        <img src="./images/icons/search.png"></button>
+                </form>
 
-                </section>
-
-            <!-- SECTION FILTERS -->
+                <!-- SECTION FILTERS -->
 
                 <section class="filter-bar">
                     <div>
                         <h3 class="filter-title">Filtres</h3>
                     </div>
-                    <div class="filter">
-                        <button class="buttons-filter">
-                            <a href="#" class="filter-button"><img src="./images/icons/price.png" class="filter-icon">Économiques</a>
-                    </button>
-                    </div>
-                    <div class="filter">
-                        <button class="buttons-filter">
-                            <a href="#" class="filter-button"><img src="./images/icons/family.png" class="filter-icon">Familial</a>
-                    </button>
-                    </div>
-                    <div class="filter">
-                        <button class="buttons-filter">
-                            <a href="#" class="filter-button"><img src="./images/icons/romantic.png" class="filter-icon">Romantique</a>
-                    </button>
-                    </div>
-                    <div class="filter">
-                        <button class="buttons-filter">
-                            <a href="#" class="filter-button"><img src="./images/icons/fire.png" class="filter-icon">Nos pépites</a>
-                    </button>
+                    <div class="filters">
+                        <div class="filter">
+                            <button class="buttons-filter">
+                                <a href="#" class="filter-button"><img src="./images/icons/price.png"
+                                        class="filter-icon">Économiques</a>
+                            </button>
+                        </div>
+                        <div class="filter">
+                            <button class="buttons-filter">
+                                <a href="#" class="filter-button"><img src="./images/icons/family.png"
+                                        class="filter-icon">Familial</a>
+                            </button>
+                        </div>
+                        <div class="filter">
+                            <button class="buttons-filter">
+                                <a href="#" class="filter-button"><img src="./images/icons/romantic.png"
+                                        class="filter-icon">Romantique</a>
+                            </button>
+                        </div>
+                        <div class="filter">
+                            <button class="buttons-filter">
+                                <a href="#" class="filter-button"><img src="./images/icons/fire.png"
+                                        class="filter-icon">Nos
+                                    pépites</a>
+                            </button>
+                        </div>
                     </div>
                 </section>
                 <section class="info-bar">
@@ -93,7 +107,6 @@
                         <h2 class="section-title">Hébergements à Marseille</h2>
                     </div>
                     <div class="hebergements-cards">
-                        <div class="hebergements-row">
                             <a href="#">
                                 <article class="card">
                                     <img src="./images/hebergements/fred-kleber.jpg"
@@ -154,10 +167,8 @@
                                     </div>
                                 </article>
                             </a>
-                        </div>
                     </div>
                     <div class="hebergements-cards">
-                        <div class="hebergements-row">
                             <a href="#">
                                 <article class="card">
                                     <img src="./images/hebergements/annie-spratt.jpg"
@@ -218,7 +229,6 @@
                                     </div>
                                 </article>
                             </a>
-                        </div>
                     </div>
                     <h3 class="filter-title">Afficher plus</h3>
 
@@ -342,32 +352,32 @@
                 </section>
             </div>
 
+            <!-- FOOTER -->
+
+            <footer>
+
+                <div class="col-footer">
+                    <h3 class="filter-title">À propos</h3>
+                    <p>Fonctionnement du site</p>
+                    <p>Conditions générales</p>
+                    <p>Données et confidentialité</p>
+                </div>
+
+                <div class="col-footer">
+                    <h3 class="filter-title">Nos Hébergements</h3>
+                    <p>Charte qualité</p>
+                    <p>Proposer votre hôtel</p>
+                </div>
+
+                <div class="col-footer">
+                    <h3 class="filter-title">Assistance</h3>
+                    <p>Centre d'aide</p>
+                    <p>Nous contacter</p>
+                </div>
+
+            </footer>
+
         </main>
-
-        <!-- FOOTER -->
-
-        <footer>
-
-            <div class="col-footer">
-                <h3 class="filter-title">À propos</h3>
-                <p>Fonctionnement du site</p>
-                <p>Conditions générales</p>
-                <p>Données et confidentialité</p>
-            </div>
-
-            <div class="col-footer">
-                <h3 class="filter-title">Nos Hébergements</h3>
-                <p>Charte qualité</p>
-                <p>Proposer votre hôtel</p>
-            </div>
-
-            <div class="col-footer">
-                <h3 class="filter-title">Assistance</h3>
-                <p>Centre d'aide</p>
-                <p>Nous contacter</p>
-            </div>
-
-        </footer>
     </div>
 </body>
 

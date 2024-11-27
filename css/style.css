@@ -464,6 +464,11 @@ footer{
 /* Big devices (desktops, less or equal 1440px) */
 
 @media (min-width : 1025px) {
+
+    .mobile-bars{
+        display: none;
+    }
+
     .submit-input-mobile {
         display: none;
     }
@@ -472,6 +477,10 @@ footer{
 /* Medium devices (tablets, less/equal than 1024px) */
 
 @media (max-width: 1024px) and (min-width: 768px) {
+
+    .mobile-bars{
+        display: none;
+    }
 
     .submit-input-mobile {
         display: none;
@@ -518,6 +527,7 @@ footer{
 
     body{
         gap: 30px;
+        max-width: 767.98px;
     }
 
     .logo-and-menu {
@@ -534,27 +544,53 @@ footer{
     .menu {
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         padding: 0px;
-        gap: 0px;
+        gap: 15px;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
     }
 
     .btn-hebergements,
     .btn-activities {
         width: 50%;
         padding: 0;
+        border: none;
     }
 
     .btn-hebergements:hover,
     .btn-activities:hover {
-        border: solid #0065FC;
-        border-width: 2px;
-        border-style: hidden hidden solid;
+        border: none;
         width: 50%;
     }
 
+    .mobile-bars{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        width: 100%;
+        max-height: 2px;
+    }
+
+    .mobile-bars img{
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .left-bars ,.right-bars{
+        width: 50%;
+        height: 2px;
+        background: #F2F2F2;
+    }
     
     .main-container{
         padding: 0%;
@@ -564,8 +600,27 @@ footer{
         padding: 0px 20px 0px;
     }
 
+    .search-bar{
+        max-width: 100%;
+        align-self: stretch;
+        flex-grow: 0;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .search-input{
+        position: absolute;
+        left: 74px;
+    }
+
     .submit-input-desktop {
         display: none;
+    }
+
+    .submit-input-mobile {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        position: relative;
+        right: 0px;
     }
 
     .filter-bar{
@@ -584,11 +639,19 @@ footer{
     .buttons-filter{
         width: 100%;
     }
+    
+    .filter-button{
+        font-size: 14px;
+    }
 
     .hebergements-and-populaires {
         flex-direction:column-reverse;
         gap: 15px;
         width: 100%;
+    }
+
+    .card-subtitle{
+        font-size: 14px;
     }
 
     .hebergements ,.populaires{

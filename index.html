@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -19,28 +19,12 @@
     <!-- HEADER -->
 
     <header>
-        <div class="logo-and-menu">
-            <div class="logo-reservia">
-                <img src="./images/logo/Booki.png" alt="Logo du site Booki" />
-            </div>
-            <div class="menu">
-                <section class="buttons">
-                    <button class="btn-hebergements">
-                        <a href="#hebergements" class="menu-btn">Hébergements</a>
-                    </button>
-                    <button class="btn-activities">
-                        <a href="#activities" class="menu-btn">Activités</a>
-                    </button>
-                </section>
-                <section class="mobile-bars">
-                    <div class="left-bars">
-                        <img class="blue-bar-left" src="./images/bars/Blue bar.png">
-                    </div>
-                    <div class="right-bars">
-                        <img class="blue-bar-right" src="./images/bars/Blue bar.png">
-                    </div>
-                </section>
-            </div>
+        <div class="logo-reservia">
+            <img src="./images/logo/Booki.png" alt="Logo du site Booki">
+        </div>
+        <div class="menu">
+            <a href="#hebergements" class="btn-menu">Hébergements</a>
+            <a href="#activities" class="btn-menu">Activités</a>
         </div>
     </header>
 
@@ -50,64 +34,44 @@
 
             <!-- SECTION INFO -->
 
-            <div class="infos-group">
-                <section class="headline">
-                    <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>
+            <section class="infos-group">
+                <div class="headline">
+                    <h1 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre-ville ou en pleine nature</p>
-                </section>
+                </div>
 
                 <!-- SECTION SEARCH FORM -->
 
-                <form class="search-bar" method="get" action="">
-                    <div class="search-front-icon">
-                        <img src="./images/icons/place.png">
-                    </div>
-                    <input class="search-input" type="text" autocomplete="off" name="search"
+                <form class="search-bar" method="get" action="#">
+                    <label class="search-front-icon" for="search-input">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </label>
+                    <input class="search-input" type="text" autocomplete="off" name="search" id="search-input"
                         placeholder="Marseille, France">
-                    <button class="submit-input-desktop" type="submit">Rechercher</button>
-                    <button class="submit-input-mobile" type="submit">
-                        <img src="./images/icons/search.png"></button>
+                        <button class="submit-input" type="submit">
+                            <span class="desktop">Rechercher</span>
+                            <i class="fa-lg fa-solid fa-magnifying-glass mobile"></i>
+                        </button>
                 </form>
 
                 <!-- SECTION FILTERS -->
 
-                <section class="filter-bar">
+                <div class="filter-bar">
                     <div>
-                        <h3 class="filter-title">Filtres</h3>
+                        <h2 class="filter-title">Filtres</h2>
                     </div>
                     <div class="filters">
-                        <div class="filter">
-                            <button class="buttons-filter">
-                                <a href="#" class="filter-button"><img src="./images/icons/price.png"
-                                        class="filter-icon">Économiques</a>
-                            </button>
-                        </div>
-                        <div class="filter">
-                            <button class="buttons-filter">
-                                <a href="#" class="filter-button"><img src="./images/icons/family.png"
-                                        class="filter-icon">Familial</a>
-                            </button>
-                        </div>
-                        <div class="filter">
-                            <button class="buttons-filter">
-                                <a href="#" class="filter-button"><img src="./images/icons/romantic.png"
-                                        class="filter-icon">Romantique</a>
-                            </button>
-                        </div>
-                        <div class="filter">
-                            <button class="buttons-filter">
-                                <a href="#" class="filter-button"><img src="./images/icons/fire.png"
-                                        class="filter-icon">Nos
-                                    pépites</a>
-                            </button>
-                        </div>
+                            <button class="buttons-filter"><i class="fa-solid fa-money-bill-wave"></i>Économiques</button>
+                            <button class="buttons-filter"><i class="fa-solid fa-person"></i>Familial</button>
+                            <button class="buttons-filter"><i class="fa-solid fa-heart"></i>Romantique</button>
+                            <button class="buttons-filter"><i class="fa-solid fa-fire"></i>Nos pépites</button>
                     </div>
-                </section>
-                <section class="info-bar">
-                    <img src="./images/icons/info.png">
+                </div>
+                <div class="info-bar">
+                    <i class="fa-sm fa-solid fa-info"></i>
                     <p>Plus de 500 logements sont disponibles dans cette ville</p>
-                </section>
-            </div>
+                </div>
+            </section>
 
             <!-- SECTIONS HEBERGEMENTS -->
 
@@ -117,7 +81,7 @@
                         <h2 class="section-title">Hébergements à Marseille</h2>
                     </div>
                     <div class="hebergements-cards">
-                        <a href="#">
+                        <a href="#" class="card-container">
                             <article class="card">
                                 <img src="./images/hebergements/fred-kleber.jpg"
                                     alt="Image de la chambre d'hôtel montrant un lit">
@@ -137,7 +101,7 @@
                                 </div>
                             </article>
                         </a>
-                        <a href="#">
+                        <a href="#" class="card-container">
                             <article class="card">
                                 <img src="./images/hebergements/febrian-zakaria.jpg"
                                     alt="Image de la chambre d'hôtel montrant un lit">
@@ -157,7 +121,7 @@
                                 </div>
                             </article>
                         </a>
-                        <a href="#">
+                        <a href="#" class="card-container">
                             <article class="card">
                                 <img src="./images/hebergements/reisetopia.jpg"
                                     alt="Image de la chambre d'hôtel montrant un lit">
@@ -179,7 +143,7 @@
                         </a>
                     </div>
                     <div class="hebergements-cards">
-                        <a href="#">
+                        <a href="#" class="card-container">
                             <article class="card">
                                 <img src="./images/hebergements/annie-spratt.jpg"
                                     alt="Image de la chambre d'hôtel montrant un lit">
@@ -199,7 +163,7 @@
                                 </div>
                             </article>
                         </a>
-                        <a href="#">
+                        <a href="#" class="card-container">
                             <article class="card">
                                 <img src="./images/hebergements/marcus-loke.jpg"
                                     alt="Image de la chambre d'hôtel montrant un lit">
@@ -219,7 +183,7 @@
                                 </div>
                             </article>
                         </a>
-                        <a href="#">
+                        <a href="#" class="card-container">
                             <article class="card">
                                 <img src="./images/hebergements/nicate-lee.jpg"
                                     alt="Image de la chambre d'hôtel montrant un lit">
@@ -316,10 +280,10 @@
 
             <!-- SECTION ACTIVITIES -->
 
-            <div id="activities" class="activities">
+            <section id="activities" class="activities">
                 <h2 class="section-title">Activités à Marseille</h2>
-                <section class="activities-frame">
-                    <a href="#">
+                <div class="activities-frame">
+                    <a href="#" class="activities-card">
                         <article class="card">
                             <img src="./images/activites/reno-laithienne.jpg" alt="Image d'un port avec des bateaux">
                             <div class="card-content">
@@ -329,7 +293,7 @@
                             </div>
                         </article>
                     </a>
-                    <a href="#">
+                    <a href="#" class="activities-card">
                         <article class="card">
                             <img src="./images/activites/paul-hermann.jpg" alt="Image d'un port avec des bateaux">
                             <div class="card-content">
@@ -339,7 +303,7 @@
                             </div>
                         </article>
                     </a>
-                    <a href="#">
+                    <a href="#" class="activities-card">
                         <article class="card">
                             <img src="./images/activites/kilyan-sockalingum.jpg" alt="Image d'un port avec des bateaux">
                             <div class="card-content">
@@ -349,7 +313,7 @@
                             </div>
                         </article>
                     </a>
-                    <a href="#">
+                    <a href="#" class="activities-card">
                         <article class="card">
                             <img src="./images/activites/florian-wehde.jpg" alt="Image d'un port avec des bateaux">
                             <div class="card-content">
@@ -359,28 +323,28 @@
                             </div>
                         </article>
                     </a>
-                </section>
-            </div>
+                </div>
+            </section>
 
             <!-- FOOTER -->
 
             <footer>
 
                 <div class="col-footer">
-                    <h3 class="filter-title">À propos</h3>
+                    <h2 class="filter-title">À propos</h2>
                     <p>Fonctionnement du site</p>
                     <p>Conditions générales</p>
                     <p>Données et confidentialité</p>
                 </div>
 
                 <div class="col-footer">
-                    <h3 class="filter-title">Nos Hébergements</h3>
+                    <h2 class="filter-title">Nos Hébergements</h2>
                     <p>Charte qualité</p>
                     <p>Proposer votre hôtel</p>
                 </div>
 
                 <div class="col-footer">
-                    <h3 class="filter-title">Assistance</h3>
+                    <h2 class="filter-title">Assistance</h2>
                     <p>Centre d'aide</p>
                     <p>Nous contacter</p>
                 </div>

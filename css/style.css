@@ -515,6 +515,7 @@ footer{
 
     .search-bar{
         width: 100%;
+        gap: 15px;
     }
 
     .submit-input{
